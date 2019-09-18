@@ -7,7 +7,7 @@ globally, to run from the command line
 
 `npm install -g miptleha-http`
 
-or locally, to use as Node.JS module
+or locally, to use as Node.js module
 
 `npm install --save miptleha-http`
 
