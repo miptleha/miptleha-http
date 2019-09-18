@@ -25,7 +25,7 @@ or locally, to use as Node.JS module
 
 ## References
 
-Project inspired and created from stackoverflow [post](https://stackoverflow.com/questions/5050851/best-lightweight-web-server-only-static-content-for-windows).
+Project is inspired and created from stackoverflow [post](https://stackoverflow.com/questions/5050851/best-lightweight-web-server-only-static-content-for-windows).
 
 I use for my purposes [http-server](https://github.com/http-party/http-server/), but suddenly it stop working (problem with default page).
 
