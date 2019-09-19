@@ -1,11 +1,11 @@
 {
   "name": "miptleha-http",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Command-line http server for static content",
-  "main": "./bin/miptleha-http",
+  "main": "miptleha-http.js",
   "scripts": {
-    "start": "node ./bin/miptleha-http",
-    "test": "node ./bin/miptleha-http test -o"
+    "start": "node miptleha-http.js",
+    "test": "node miptleha-http.js test -o"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/miptleha/miptleha-http#readme",
   "bin": {
-    "miptleha-http": "./bin/miptleha-http"
+    "miptleha-http": "miptleha-http.js"
   }
 }
