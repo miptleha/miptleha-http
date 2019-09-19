@@ -48,7 +48,7 @@ server.listen(opt.port, (err) => {
     console.log(`start listening port: ${opt.port}`);
 });
 
-if (opt.startPage) {
+if (opt.openBrowser) {
     var url = `http://localhost:${opt.port}`;
     var start = (process.platform == 'darwin' ? 'open' : process.platform == 'win32' ? 'start' : 'xdg-open');
     require('child_process').exec(start + ' ' + url);
