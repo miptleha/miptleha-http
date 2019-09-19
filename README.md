@@ -15,6 +15,8 @@ or locally, to test Node.JS application:
 
 `miptleha-http [path] [options]`
 
+`path` serve the directory as static http (default: present working directory)
+
 ## Options
 
 `-p port` Port to use (default: 8080)

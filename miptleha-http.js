@@ -47,7 +47,7 @@ server.listen(opt.port, (err) => {
     if (err)
         return console.log(`can not start listening on port: ${opt.port}, ${err}`);
 
-    console.log(`start listening port: ${opt.port}`);
+    console.log(`starting server: http://localhost:${opt.port}`);
 });
 
 if (opt.openBrowser) {
