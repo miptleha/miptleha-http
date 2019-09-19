@@ -3,6 +3,7 @@
 var fs = require('fs');
 var http = require('http');
 var path = require('path');
+var url = require('url');
 
 //parse options
 var args = process.argv.slice(2);
@@ -26,9 +27,9 @@ console.log(`options: path=${dir}, port=${opt.port}, openBrowser=${opt.openBrows
 
 //start listen
 var server = http.createServer((req, res) => {
-    var file = req.url;
-    console.log(`request: ${file}`);
+    console.log(`${req.method}: ${req.url}`);
 
+    var file = url.parse(req.url).pathname;
     if (file == null || file == '/' || file == '\\')
         file = path.join(dir, opt.startPage);
     else
@@ -51,7 +52,7 @@ server.listen(opt.port, (err) => {
 });
 
 if (opt.openBrowser) {
-    var url = `http://localhost:${opt.port}`;
+    var startUrl = `http://localhost:${opt.port}`;
     var start = (process.platform == 'darwin' ? 'open' : process.platform == 'win32' ? 'start' : 'xdg-open');
-    require('child_process').exec(start + ' ' + url);
+    require('child_process').exec(start + ' ' + startUrl);
 }
