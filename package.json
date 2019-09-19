@@ -1,6 +1,6 @@
 {
   "name": "miptleha-http",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Command-line http server for static content",
   "main": "miptleha-http.js",
   "scripts": {
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/miptleha/miptleha-http/issues"
   },
-  "homepage": "https://github.com/miptleha/miptleha-http#readme"
+  "homepage": "https://github.com/miptleha/miptleha-http#readme",
+  "bin": {
+    "miptleha-http": "miptleha-http"
+  }
 }
