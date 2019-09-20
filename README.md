@@ -1,13 +1,13 @@
 # miptleha-http
 
-Command-line http server for static content.
+Command-line http server for static content. Built with pure Node.js without the use third party modules (all code in small [script](miptleha-http.js)).
 
 ## Install
-globally, to run from the command line:
+globally to run from the command line:
 
 `npm install -g miptleha-http`
 
-or locally, to test Node.js application:
+or locally:
 
 `npm install --save miptleha-http`
 
@@ -32,3 +32,7 @@ Project inspired and created from stackoverflow [post](https://stackoverflow.com
 I use for my purposes [http-server](https://github.com/http-party/http-server/), but suddenly it stop working (problem with default page).
 
 Another good static http server: [light-server](https://github.com/txchen/light-server).
+
+Sample server in [MDN](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Node_server_without_framework) with breakdown.
+
+

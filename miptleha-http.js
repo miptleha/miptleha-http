@@ -25,7 +25,7 @@ for (var i = 0; i < args.length; i++) {
 }
 console.log(`options: path=${dir}, port=${opt.port}, openBrowser=${opt.openBrowser}, startPage=${opt.startPage}`);
 
-//start listen
+//web server
 var server = http.createServer((req, res) => {
     console.log(`${req.method}: ${req.url}`);
 
@@ -40,7 +40,29 @@ var server = http.createServer((req, res) => {
         console.log(`can not find or open file: ${file}, ${err}`);
         res.writeHead(404, 'Not found');
         res.end();
-    })
+    });
+
+    const ext = path.parse(file).ext;
+    const map = {
+      '.ico': 'image/x-icon',
+      '.html': 'text/html',
+      '.txt': 'text/plain',
+      '.js': 'text/javascript',
+      '.json': 'application/json',
+      '.css': 'text/css',
+      '.png': 'image/png',
+      '.gif': 'image/gif',
+      '.jpg': 'image/jpeg',
+      '.wav': 'audio/wav',
+      '.mp3': 'audio/mpeg',
+      '.mp4': 'video/mp4',
+      '.svg': 'image/svg+xml',
+      '.pdf': 'application/pdf',
+      '.doc': 'application/msword'
+    };
+    var contentType = map[ext] || 'application/octet-stream';
+
+    res.writeHead(200, {'Content-Type': contentType });
     stream.pipe(res);
 });
 
