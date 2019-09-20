@@ -1,13 +1,13 @@
 # miptleha-http
 
-Command-line http server. Supports only static content.
+Command-line http server for static content.
 
 ## Install
 globally, to run from the command line:
 
 `npm install -g miptleha-http`
 
-or locally, to test Node.JS application:
+or locally, to test Node.js application:
 
 `npm install --save miptleha-http`
 
@@ -15,7 +15,7 @@ or locally, to test Node.JS application:
 
 `miptleha-http [path] [options]`
 
-`path` serve the directory as static http (default: present working directory)
+`path` Serve the directory as static http (default: present working directory)
 
 ## Options
 
