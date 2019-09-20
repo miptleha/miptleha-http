@@ -15,7 +15,7 @@ or locally, to test Node.js application:
 
 `miptleha-http [path] [options]`
 
-`path` serve the directory as static http (default: present working directory)
+`path` Serve the directory as static http (default: present working directory)
 
 ## Options
 
