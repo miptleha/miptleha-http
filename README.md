@@ -17,8 +17,6 @@ or locally:
 
 `path` Serve the directory as static http (default: present working directory)
 
-## Options
-
 `-p port` Port to use (default: 8080)
 
 `-o` Open browser window after starting server
