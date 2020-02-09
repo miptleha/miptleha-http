@@ -1,11 +1,11 @@
 {
   "name": "miptleha-http",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "description": "Command-line http server for static content",
   "main": "miptleha-http.js",
   "scripts": {
     "start": "node miptleha-http.js",
-    "test": "node miptleha-http.js test -o"
+    "test": "node miptleha-http.js test"
   },
   "repository": {
     "type": "git",
