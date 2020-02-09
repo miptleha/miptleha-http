@@ -10,14 +10,14 @@ var args = process.argv.slice(2);
 var dir = path.resolve('.');
 var opt = {
     port: '8080',
-    openBrowser: false,
+    openBrowser: true,
     startPage: 'index.html'
 };
 for (var i = 0; i < args.length; i++) {
     if (args[i] == '-p')
         opt.port = i < args.length - 1 ? args[i + 1] : opt.port;
-    else if (args[i] == '-o')
-        opt.openBrowser = true;
+    else if (args[i] == '-d')
+        opt.openBrowser = false;
     else if (args[i] == '-i')
         opt.startPage = i < args.length - 1 ? args[i + 1] : opt.startPage;
     else if (i == 0)
