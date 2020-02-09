@@ -19,9 +19,11 @@ or locally:
 
 `-p port` Port to use (default: 8080)
 
-`-o` Open browser window after starting server
+`-d` Do not open browser window after starting server
 
-`-i file` Will be served as the default file to any directory requests (default: `index.html`) 
+`-i file` Will be served as the default file to any directory requests (default: `index.html`)
+
+Without parameters, the server will be launched in the current folder and default browser will open index.html.
 
 ## References
 
