@@ -4,6 +4,7 @@ var fs = require('fs');
 var http = require('http');
 var path = require('path');
 var url = require('url');
+var runner = require('child_process');
 
 //parse options
 var args = process.argv.slice(2);
@@ -46,6 +47,7 @@ var server = http.createServer((req, res) => {
     const map = {
       '.ico': 'image/x-icon',
       '.html': 'text/html',
+      '.php': 'text/html',
       '.txt': 'text/plain',
       '.js': 'text/javascript',
       '.json': 'application/json',
@@ -62,8 +64,31 @@ var server = http.createServer((req, res) => {
     };
     var contentType = map[ext] || 'application/octet-stream';
 
-    res.writeHead(200, {'Content-Type': contentType });
-    stream.pipe(res);
+
+    if (ext == '.php') {
+        console.log('execute php');
+        runner.exec("php " + file, function(err, phpResponse, stderr) {
+            if (err) {
+                console.log('php error');
+                console.log(err);
+                res.writeHead(500, 'Php error');
+                res.end("Php error: " + err);
+            }
+            else {
+                console.log('php ok'); 
+                var Readable = require('stream').Readable;
+                var s = new Readable();
+                s.push(phpResponse);
+                s.push(null);
+                res.writeHead(200, {'Content-Type': contentType });
+                s.pipe(res);
+            }
+        });
+    }
+    else {
+        res.writeHead(200, {'Content-Type': contentType });
+        stream.pipe(res);
+    }
 });
 
 server.listen(opt.port, (err) => {
@@ -76,5 +101,5 @@ server.listen(opt.port, (err) => {
 if (opt.openBrowser) {
     var startUrl = `http://localhost:${opt.port}`;
     var start = (process.platform == 'darwin' ? 'open' : process.platform == 'win32' ? 'start' : 'xdg-open');
-    require('child_process').exec(start + ' ' + startUrl);
+    runner.exec(start + ' ' + startUrl);
 }

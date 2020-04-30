@@ -1,6 +1,6 @@
 # miptleha-http
 
-Command-line http server for static content. Built with pure Node.js without the use third party modules (all code in small [script](miptleha-http.js)).
+Command-line http server for static content (now with php support). Built with pure Node.js without the use third party modules (all code in small [script](miptleha-http.js)).
 
 ## Install
 globally to run from the command line:
