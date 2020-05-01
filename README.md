@@ -25,6 +25,14 @@ or locally:
 
 Without parameters, the server will be launched in the current folder and default browser will open index.html.
 
+## Test
+
+The project contains a test that verifies the functionality of the module for static HTML with individual styles and scripts, as well as the execution of php scripts. To run the tests, first download the project yourself locally and run the tests:
+```
+git clone https://github.com/miptleha/miptleha-http.git
+npm test
+```
+
 ## References
 
 Project inspired and created from stackoverflow [post](https://stackoverflow.com/questions/16333790/node-js-quick-file-server-static-files-over-http).
