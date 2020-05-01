@@ -30,6 +30,7 @@ Without parameters, the server will be launched in the current folder and defaul
 The project contains a test that verifies the functionality of the module for static HTML with individual styles and scripts, as well as the execution of php scripts. To run the tests, first download the project yourself locally and run the tests:
 ```
 git clone https://github.com/miptleha/miptleha-http.git
+cd miptleha-http
 npm test
 ```
 
