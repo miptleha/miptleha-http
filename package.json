@@ -1,6 +1,6 @@
 {
   "name": "miptleha-http",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Command-line http server for static content (now with php support)",
   "main": "miptleha-http.js",
   "scripts": {
